@@ -69,5 +69,20 @@ module.exports = {
         }
       ]
     }
-  }],
+  },{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Web Technologies',
+        short_name: 'Web Technologies',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#105859',
+        display: 'minimal-ui',
+        icon: 'static/favicon.ico', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+    },
+],
 }

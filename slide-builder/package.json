@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "slide-builder",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A slide builder",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -18,10 +18,11 @@
     "@mdx-js/react": "^1.6.22",
     "eslint-config-react-app": "^6.0.0",
     "gatsby": "^3.13.0",
-    "gatsby-image": "^3.11.0",
     "gatsby-plugin-glamor": "^3.11.0",
     "gatsby-plugin-image": "^1.13.0",
+    "gatsby-plugin-manifest": "^3.13.0",
     "gatsby-plugin-mdx": "^2.13.0",
+    "gatsby-plugin-offline": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-typography": "^3.13.0",
     "gatsby-remark-images": "^5.10.0",

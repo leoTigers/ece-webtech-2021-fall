@@ -5,7 +5,17 @@ This is the source code supporting our course. It contains the course informatio
 
 ## Usage
 
-Navigate inside the `./webtech` folder to read the raw material and access the labs.
+### Reading slides' content
+
+Navigate inside the [`./webtech`](webtech) folder to read the raw material and access the labs.
+
+### Access online slides
+
+The slides are available on Netlify as a static website - [ece-webtech-2021-fall.netlify.app](https://ece-webtech-2021-fall.netlify.app/).
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e146f163-e0eb-4178-8cd0-44555b8dd8b8/deploy-status)](https://app.netlify.com/sites/ece-webtech-2021-fall/deploys)
+
+### Build slides locally as a static website
 
 Run the following commands to get the site up and running.
 
@@ -20,3 +30,9 @@ npm run develop
 # If you have problem, try
 npm run clean && npm run develop
 ```
+
+## Author
+
+Sergei Kudinov   
+sergei@adaltas.com   
+at [Adaltas](https://www.adaltas.com/)
