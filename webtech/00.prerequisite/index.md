@@ -21,6 +21,8 @@ duration: 30 min
 * On Windows: Linux Bash Shell, Powershell, Git Bash
 * On MacOS / Linux: native
 
+[Bash base commands](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+
 ## Vi(m)
 
 * Bash text editor
