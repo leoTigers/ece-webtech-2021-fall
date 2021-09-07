@@ -3,11 +3,36 @@
 
 This is the source code supporting our course. It contains the course information as well as its supporting labs.
 
+## Modules
+
+1. Node.js introduction
+2. Web application framework - Express.js
+3. Databases and storage
+4. Building interfaces with React
+5. Material Design and Material UI
+6. OAuth and OpenID Connect
+7. Advanced React
+
+## Assignment
+
+The course assignment is consist of:
+
+1. Participation
+2. Project
+3. MCQ exam (multiple choice questions)
+
 ## Usage
 
 ### Reading slides' content
 
-Navigate inside the [`./webtech`](webtech) folder to read the raw material and access the labs.
+Navigate inside the [`./webtech`](webtech) folder to read the raw material and access the labs. The module's folders contain following files:
+
+- `index.md` - materials for the module
+- `slides.pdf` - PDF slides
+- `lab.md` - labs description
+- `homework.md` - homework description
+- `assets` folder - assets provided for the labs
+- `image` folder - images used in the `.md` files
 
 ### Access online slides
 
