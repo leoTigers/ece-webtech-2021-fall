@@ -1,5 +1,5 @@
 ---
-duration: 30 min
+duration: 1h to 3h
 ---
 
 # Prerequisites
@@ -71,7 +71,7 @@ duration: 30 min
 * SSL certif has been certified by a renowned authority
 * HTTPS: HTTP secured with SSL/TLS
 
-## SSH - Secure SHell
+## SSH - Secure shell
 
 * Cryptographic network protocol to operate network services securely over an unsecured network
 * Exchange of public & private keys to secure the exchange
@@ -121,17 +121,24 @@ duration: 30 min
   * GitKraken (Mac/Win/Linux)
   * Your terminal!
 
-## Editors
+## Editors, IDE
 
-As a developer, your editor shall be your best friend.
+As a developer, the terminal being your partner and the editor is your best friend: 
 
-* Vim
-* VsCode editor
-* Atom
-* Sublime Text
-* TextWrangler 
-* Notepad++
-* WebStorm
+* [Vim](https://www.vim.org/) (Linux, MacOS, Windows)   
+  Free, one of the most powerful, many will say the most powerful, single file or project oriented.
+* [VsCode](https://code.visualstudio.com/) (Linux, MacOS, Windows)   
+  Free most popular editor, most active community and plugins development
+* [Atom](https://atom.io/) (Linux, MacOS, Windows)   
+  Free project oriented, minimalist and productive UI (my day to day favorit editor), slow and memory hungry
+* [Sublime Text](https://www.sublimetext.com/) (Linux, MacOS, Windows)   
+  Free, very fast, single file or project oriented
+* [BBedit](https://www.barebones.com/products/bbedit/) (MacOS)   
+  Free version very powerful, very fast
+* [Notepad++](https://notepad-plus-plus.org/) Windows)   
+  Free, almost a Windows standard, powerful and fast
+* [WebStorm](https://www.jetbrains.com/webstorm/) (Linux, MacOS, Windows)
+  Licensed, 30 days trial
 * ...
 
 ## Unit Testing
@@ -151,10 +158,11 @@ As a developer, your editor shall be your best friend.
 
 * "A way of programming"
 * Common paradigms:
-  * Imperative - Control flow is an explicit sequence of commands
-  * Functional - Computation proceeds by function calls, no global state
-  * Object-oriented - Everything is an object
-  * Event-driven - Control flow determined by async actions
+  * Declarative: the program describes its desired results without explicitly listing commands or steps.
+  * Imperative: the control flow is an explicit sequence of commands.
+  * Functional: the computation proceeds by function calls, no global state
+  * Object-oriented: everything is an object, functions are methods and are executed with the object's context
+  * Event-driven: the control flow is triggered and determined by async actions
 
 ## StackOverflow
 
@@ -163,3 +171,31 @@ As a developer, your editor shall be your best friend.
 * Any subject
 * Lots of answered questions (> 1M !)
 * Don’t forget the source code !
+
+## Node.js Installation
+
+* Linux / MacOS, don't use the installer or your package manager.
+* We want to be able to switch between multiple Node.js versions.
+* We want Node.js to be installed inside your home directory, with an administrative permissions (no `sudo`).
+* Use [`n-install`](https://github.com/mklement0/n-install), a variation of [`n`](https://github.com/tj/n).
+* Readme the `n-install` readme file (as a rule of thumb, always read the readme), it explains the reasons of using it and list the requirements.
+
+
+## Learning
+
+* [Kahn academy](https://www.khanacademy.org/)   
+  Free, it is a non-profit relying on donations.
+* [Codecademy](https://www.codecademy.com)   
+  Free with a commercial offering.
+
+## For next week
+
+* Select a teammates to work by groups of 2 and only groups of 2, no exception (beside one if the number of students is odd)
+* Create a private Git repository on GitHub and be ready to share the link during the course.
+* Gain knowledge in all the prerequisites above:
+  * Confortable in JavaScript, CSS, HTML and termain usage.
+  * Master the Markdown format, be ready to respect its syntax with care.
+  * Basic knowledge in Git, SSH, Vim, networking, HTTP and REST apis.
+* Download a Linux VM or setup the computer for dual boot (recommanded with 8GB of RAM).
+* Set up the Linux machine including an IDE, Linux tools, ...
+* Install Node.js with n-install (`curl -L https://git.io/n-install | bash`, git, gcc and curl must be installed), for those choosing the Windows path, you can stick with the official installer.
