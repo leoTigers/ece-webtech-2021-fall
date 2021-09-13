@@ -371,4 +371,4 @@ npm run dev app.js
 * You should have an `index.js` file with the server creation and `handles.js` defining the server's callback
 * Add a `package.json` file with you module declaration
 * Add a `readme.md` file with title, introduction, run instructions and your name
-* Push it all to a GitLab / GitHub repository and send a link to your repository to sergei@adaltas.com
+* Push it all to a your own GitLab / GitHub repository
