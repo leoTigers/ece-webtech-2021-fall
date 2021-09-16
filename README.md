@@ -26,7 +26,7 @@ The course assignment is consist of:
 
 ### Reading slides' content
 
-Navigate inside the [`./webtech`](webtech) folder to read the raw material and access the labs. The module's folders contain following files:
+Navigate inside the [`./courses/webtech`](courses/webtech) folder to read the raw material and access the labs. The module's folders contain following files:
 
 - `index.md` - materials for the module
 - `slides.pdf` - PDF slides
@@ -48,7 +48,7 @@ Run the following commands to get the site up and running.
 ```
 # Clone the repository
 git clone https://github.com/adaltas/ece-webtech-2021-fall.git webtech
-cd webtech/slide-builder
+cd webtech/gatsby
 # Download the dependencies
 npm install
 # Start the development server
