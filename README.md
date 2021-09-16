@@ -5,6 +5,7 @@ This is the source code supporting our course. It contains the course informatio
 
 ## Modules
 
+0. Prerequisites
 1. Node.js introduction
 2. Web application framework - Express.js
 3. Databases and storage
