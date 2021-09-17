@@ -89,7 +89,7 @@ yarn add package_name [--dev]
 
 [Read more about NodeJS packages and modules](https://docs.npmjs.com/about-packages-and-modules)
 
-## Creating modules
+## CommonJS module `.cjs`
 
 * Use
   ```javascript
@@ -102,15 +102,32 @@ yarn add package_name [--dev]
   module.exports = {
     a: ...,
     b: ...
-  } 
+  };
   // or 
-  module.exports.a = ...
-  module.exports.b = ...
+  module.exports.a = ...;
+  module.exports.b = ...;
   ```
 
 * Import in another file: (NB: **no extension**)
   ```javascript
-  const my_mod = require('/path/to/my_file')
+  const my_mod = require('mypath/to/my_file')
+  ```
+
+## ECMAScript modules (ESM) `.mjs`
+
+* Use
+
+  ```js
+  export default my_obj;
+  export {my_prop};
+  ```
+
+* Import in another file
+
+  ```js
+  import my_obj from '/path/to/file.js';
+  # or
+  import {my_prop} from '/path/to/file.js';
   ```
 
 ## `package.json` file
@@ -124,9 +141,9 @@ It stores a module's informations:
 {
   "name": "ece-webtech",
   "description": "NodeJS project for ECE class",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "dependencies": {},
   "devDependencies": {}
 }
@@ -190,26 +207,60 @@ yarn init
 Example:
 
 ```js
-function myFunction (callback) {
-  // Wait 3 seconds and run callback
-  setTimeout(function () {
-    callback()
-  }, 3000)
-  // Run the next function without blocking
-  console.log("I am printed first")
+function login (username, password, callback) {
+  db
+  .query(`SELECT ${username} FROM users WHERE password = ${password}`)
+  .execute( (err, results) => {
+    callback(err, results.length : true : false)
+  })
 }
-
-// Run with passing a callback function
-myFunction(function() {
-  console.log("I am printed second")
+// Execute a function with a callback argument
+login(username, password, function(err, success) {
+  console.log(success ? "Logged in" : "Invalid credentials")
 })
 ```
 
-Output:
+Promise syntax
 
 ```js
-I am printed first
-I am printed second
+function login (username, password) {
+  return new Promise(resolve, reject) => {
+    db
+    .query(`SELECT ${username} FROM users WHERE password = '${password}'`) // dont ever do this
+    .execute( (err, results) => {
+      err ? reject(err) : resolve(results.length : true : false)
+    })
+  })
+}
+// Execute a function returning a promise
+login(username, password)
+.then(function(success) => {
+  console.log(success ? "Logged in" : "Invalid credentials")
+})
+.catch(function(err){
+  console.error(err.message)
+})
+```
+
+Async syntax
+
+```js
+function async login (username, password) {
+  return new Promise(resolve, reject) => {
+    db
+    .query(`SELECT ${username} FROM users WHERE password = ${password}`) // dont ever do this
+    .execute( (err, results) => {
+      err ? reject(err) : resolve(results.length : true : false)
+    })
+  })
+}
+// Execute a function returning a promise
+try{
+  const success = await login(username, password)
+  console.log(success ? "Logged in" : "Invalid credentials")
+}catch(err){
+  console.error(err.message)
+}
 ```
 
 ## Routing
