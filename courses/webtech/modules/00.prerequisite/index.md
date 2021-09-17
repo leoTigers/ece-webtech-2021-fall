@@ -172,6 +172,40 @@ As a developer, the terminal being your partner and the editor is your best frie
 * Lots of answered questions (> 1M !)
 * Don’t forget the source code !
 
+## JSON
+
+- JSON is a subset of JavaScript, JavaScript is built upon JSON
+- Data format
+
+Valid JavaScript:
+
+```js
+const user = {
+  firstname: 'Lucky',
+  lastname: `Luke`,
+  "password": "secret",
+  age: 42,
+  mood: 0.9,
+  languages: ['en', ['fr_FR', 'fr_CA'] , , ],
+  level: null,
+  friends: undefined,
+};
+```
+
+Valid JSON:
+
+```json
+{
+  "firstname": "Lucky",
+  "lastname": "Luke",
+  "password": "secret",
+  "age": 42,
+  "mood": 0.9,
+  "languages": ["en", ["fr_FR", "fr_CA"]],
+  "level": null
+}
+```
+
 ## Node.js Installation
 
 * Linux / MacOS, don't use the installer or your package manager.
