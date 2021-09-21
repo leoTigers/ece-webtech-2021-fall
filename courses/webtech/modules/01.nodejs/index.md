@@ -245,12 +245,12 @@ login(username, password)
 Async syntax
 
 ```js
-function async login (username, password) {
-  return new Promise(resolve, reject) => {
+async function login (username, password) {
+  return new Promise((resolve, reject) => {
     db
     .query(`SELECT ${username} FROM users WHERE password = ${password}`) // dont ever do this
     .execute( (err, results) => {
-      err ? reject(err) : resolve(results.length : true : false)
+      err ? reject(err) : resolve(results.length ? true : false)
     })
   })
 }
@@ -260,7 +260,7 @@ try{
   console.log(success ? "Logged in" : "Invalid credentials")
 }catch(err){
   console.error(err.message)
-}
+};
 ```
 
 ## Routing
