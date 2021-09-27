@@ -14,3 +14,46 @@ We want to ensure our project adheres to community good practices. This include:
 - ...
 
 Once we get all this setup, our new web application will start an HTTP web server with Express.js. It exposes some static routes such as the homepage as well as dynamic routes to print information relative to a given channel, or an error message if the channel does not exist. The route shall match a pattern like `/channel/{channel_id}`.
+
+## 1. README
+
+Update the readme to briefly present the project, we are building a Chat application. We must adjust the introduction to our audience. For example, we could present what the application will do, why we do it and the technologies we anticipate to use.
+
+The README must also contain basic instructions on how to run the project.
+
+## Initialize the project repository
+
+A Node.js project was initialized in the previous lab. You can start from there.
+
+There shall be no dependencies yet declared. Rename the project to `webtech-back-end`. A script entry exist to define the `start` command. Update it to reference the `./lib/index.js`.
+
+```json
+{
+  ...
+  "scripts": {
+    "start": "node ./lib/index.js"
+  },
+  ...
+}
+```
+
+## Mock the application
+
+A squeleton application is provided inside `./lab/lib/index.js`. The application is created with an hardcode in-memory dataset. Import the file into your project and make the necessary adjustments.
+
+## Activate Express
+
+Uncomment the express code and make sure to add the dependency in the `package.json` file with `npm install` or `yarn add`.
+
+## Implementation
+
+Implement the 3 routes already in place to display the homepage, the list of channels and the details of a channel.
+
+## Refactoring
+
+Create a new file in `./lib/db.js` and import the `db` object into it. Export 2 functions:
+
+* `list`: return all the channels
+* `get`: retrieve a channel by id
+
+Update the express routes to use the new `db` module.
