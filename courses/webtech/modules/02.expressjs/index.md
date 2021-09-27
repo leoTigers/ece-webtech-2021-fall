@@ -161,7 +161,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 </html>
 ```
 
-## Let’s bring some AJAX
+## Let’s get REST
 
 * Technologies used to dynamically update static pages
 * Use JS embedded in HTML
