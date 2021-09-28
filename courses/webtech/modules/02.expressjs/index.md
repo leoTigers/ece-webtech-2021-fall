@@ -25,6 +25,7 @@ The course will introduce Node.JS frameworks and focus on ExpressJS to write a w
   * Client connects to communicate
   * Usually communicating in JSON
   
+
 REST API example: https://petstore.swagger.io/
 
 ## How to use an API ?
@@ -40,8 +41,8 @@ REST API example: https://petstore.swagger.io/
 * With express:
 
 ```javascript
-express = require('express')
-app = express()
+const express = require('express')
+const app = express()
 
 app.set('port', 1337)
 
@@ -124,29 +125,28 @@ app.get(
 ## Make it sexy !
 
 * In `index.js`
-```js
-path = require('path')
-app.use(express.static(path.join(__dirname, 'public')))
-```
+  ```js
+  const path = require('path')
+  app.use(express.static(path.join(__dirname, 'public')))
+  ```
 * Put JQuery & bootstrap files in `public/js` and `public/css`
 * In a `views/partials/head.ejs` file:
+  ```html
+  <meta charset="UTF-8">
+  <title>ECE AST</title>
 
-```html
-<meta charset="UTF-8">
-<title>ECE AST</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <style>
+      body    { padding-top:50px; }
+  </style>
 
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<style>
-    body    { padding-top:50px; }
-</style>
-
-<script src="/js/jquery-2.1.4.min.js"></script>
-<script src="/js/bootstrap.min.js" /></script>
-```
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/bootstrap.min.js" /></script>
+  ```
 
 ## Make it sexy !
 
-* In `views/hello.ejs`:
+In `views/hello.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -175,31 +175,31 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 ```js
 module.exports = {
-  get: (callback) => {
-    callback(null, [
-      { timestamp: new Date('2013-11-04 14:00 UTC').getTime(), value:12}
-    , { timestamp: new Date('2013-11-04 14:30 UTC').getTime(), value:15}
-    ])
+  list: () => {
+    new Promise((resolve) => {
+      resolve([
+        { metric: 1, timestamp: new Date('2013-11-04 14:00 UTC').getTime(), value:12},
+        { metric: 2, timestamp: new Date('2013-11-04 14:30 UTC').getTime(), value:15}
+      ])
+    })
   }
 }
 ```
 
 ## Create dummy data
 
-* Expose the metrics on the back-end
+Expose the metrics on the back-end:
 
 ```javascript
-app.get('/metrics.json', (req, res) => {
-  metrics.get((err, data) => {
-    if(err) throw err
-    res.status(200).json(data)
-  })
+app.get('/metrics.json', async (req, res) => {
+  const data = await metrics.list()
+  res.status(200).json(data)
 })
 ```
 
 ## And get it on the front !
 
-* In our `hello.ejs`
+In our `hello.ejs`:
 
 ```html
 <body class="container">
@@ -215,7 +215,7 @@ app.get('/metrics.json', (req, res) => {
 
 ## And get it on the front !
 
-* And after the end of the body between script tags:
+After the end of the body between script tags:
 
 ```js
 $('#show-metrics').click((e) => {
@@ -240,13 +240,6 @@ $('#show-metrics').click((e) => {
 
 * [Swagger Inspector](https://inspector.swagger.io)
 * `curl` bush command:
-```shell
-curl 
-```
-
-## Work of Part 1
-
-* Using the code and repo from last module, convert everything to use `express` 
-instead of doing routing and server setup manually. You should have:
-  - `/` home page with description 
-  - `/hello` page with the button and AJAX request for obtaining metrics
+  ```shell
+  curl 
+  ```
