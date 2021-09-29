@@ -152,7 +152,7 @@ In `views/hello.ejs`:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <% include partials/head %>
+      <% include('partials/head') %>
   </head>
   <body class="container">
     <h1>Hello <%= name %></h1>
