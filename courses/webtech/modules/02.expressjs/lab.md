@@ -21,7 +21,7 @@ Update the readme to briefly present the project, we are building a Chat applica
 
 The README must also contain basic instructions on how to run the project.
 
-## Initialize the project repository
+## 2. Initialize the project repository
 
 A Node.js project was initialized in the previous lab. You can start from there.
 
@@ -37,19 +37,19 @@ There shall be no dependencies yet declared. Rename the project to `webtech-back
 }
 ```
 
-## Mock the application
+## 3. Mock the application
 
 A squeleton application is provided inside `./lab/lib/index.js`. The application is created with an hardcode in-memory dataset. Import the file into your project and make the necessary adjustments.
 
-## Activate Express
+## 4. Activate Express
 
 Uncomment the express code and make sure to add the dependency in the `package.json` file with `npm install` or `yarn add`.
 
-## Implementation
+## 5. Implementation
 
 Implement the 3 routes already in place to display the homepage, the list of channels and the details of a channel.
 
-## Refactoring
+## 6. Refactoring
 
 Create a new file in `./lib/db.js` and import the `db` object into it. Export 2 functions:
 
