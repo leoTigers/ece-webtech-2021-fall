@@ -282,7 +282,7 @@ const serverHandle = function (req, res) {
 }
 ```
 
-Access to your local website by different URLs like `localhost:8080/hello/?name=John`.
+Access to your local website by different URLs like `localhost:8080/hello?name=John`.
 
 ### 8. Organize the source code in a module
 
