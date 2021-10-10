@@ -11,8 +11,9 @@ The model is made of 3 entities:
 - messages
 
 The relationships are as follow:
-- channels have messages
-- messages have an owner
+- channels have 0 or more messages
+- channels have 1 or more users
+- messages have a single author
 - no need for a user to list the messages he sent
 
 ## Part 1: test coverage for every entity
@@ -31,7 +32,7 @@ This exercise involves an understanding of [Mocha](https://mochajs.org/) and its
 
 We will use LevelDB as our storage engine. It is a sorted key/value store. Keys and values are string or Buffers. For example, the `channels['1']` property of `store` could be stored with the key `channels:1` inside LevelDB. The value remains the same, but since it is an object literal, it must be [serialized](https://en.wikipedia.org/wiki/Serialization). While not being the most efficient format, JSON is a suitable format. It is easy to use in JavaScript, readable by humans, and smaller compared to YAML or XML. In production, binary formats such as [Protocol Buffer](https://en.wikipedia.org/wiki/Protocol_Buffers) and [Apache Avro](https://en.wikipedia.org/wiki/Apache_Avro) are better.
 
-We must now re-implement all our tests to reflect our LevelDB implementation. You will notice by going to the [LevelDB documentation](https://www.npmjs.com/package/level) that the API to manipulate keys is pretty simple. We can `put`, `get`, `delete` and `scan` keys. The code of the `./lib/db.js` module and of the tests remain unchanged.
+We must now re-implement all our tests to reflect our LevelDB implementation. You will notice by going to the [LevelDB documentation](https://www.npmjs.com/package/level) that the API to manipulate keys is pretty simple. We can `put`, `get`, `delete` and `scan` keys. We provide examples as commented code in `./lib/db.js`. The code of the tests remain unchanged.
 
 We have provided commented code to show you how. To get started, do the following operations:
 

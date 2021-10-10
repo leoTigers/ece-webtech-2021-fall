@@ -3,7 +3,7 @@ date: 2020-10-22
 disabled: true
 ---
 
-# Databases and storage
+# Databases, storage and unit test
 
 * RDBMS (basis for SQL) : MySQL, PostgreSQL, Hive, Oracle
 * NoSQL:
@@ -26,7 +26,7 @@ disabled: true
 * It’s blazing fast
 * In memory & backed by the file system
 * Keys are ordered: suitable for time series such as messages and metrics
-* Data compression with Snappy
+* Data compression with  
 * Embedded in the app, nothing else to set up and manage
 
 ## Some limitations
@@ -109,3 +109,14 @@ const rs = db.createReadStream()
     console.log('Stream ended')
   })
 ```
+
+## Unit test
+
+* Test a piece of code that can be logically isolated in a system
+* At its core, it is just a function which is schedule by the testing library
+* Functions can be groups toguether, filtered, and skipped
+
+## Assertion
+
+* Function must succeed to pass or throw an error to fail
+* An assertion library is handy to check valid information
